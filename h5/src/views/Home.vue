@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <a @click="setEn">EN</a> | 
+    <a @click="setEn">EN</a> |
     <a @click="setZh">ZH</a>
     <hello-world/>
     <div class="env">
@@ -20,7 +20,7 @@ export default {
   components: {
     HelloWorld
   },
-  data() {
+  data () {
     return {
       setEn,
       setZh,
