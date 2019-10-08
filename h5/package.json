@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --port 8086",
     "build": "vue-cli-service build",
+    "build:local": "vue-cli-service build --no-clean",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

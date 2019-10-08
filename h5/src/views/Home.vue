@@ -4,7 +4,7 @@
     <a @click="setZh">ZH</a>
     <hello-world/>
     <div class="env">
-      {{ env }}
+      {{ message }}
     </div>
   </div>
 </template>
@@ -12,7 +12,7 @@
 <script>
 import HelloWorld from '@/components/HelloWorld.vue'
 import { setEn, setZh } from '@/common/lang'
-import envConstants from '@/common/constants'
+import { envConstants } from '@/common/constants'
 
 export default {
   name: 'home',
@@ -24,12 +24,13 @@ export default {
       setEn,
       setZh,
       envConstants,
-      env: process.env.NODE_ENV
+      env: process.env.NODE_ENV,
+      message: ''
     }
   },
   created () {
     this.$axios.get('/debug/api/test').then((res) => {
-      console.log(res.data)
+      this.message = res.data
     })
   }
 }

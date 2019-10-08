@@ -2,15 +2,16 @@ import development from './env/development'
 import production from './env/production'
 import test from './env/test'
 
-const env = process.env
+export const env = process.env
+export const isDev = process.env.NODE_ENV === 'development'
 
-let envConstants = {}
+let envConstant = {}
 if (env.NODE_ENV === 'development') {
-  envConstants = development
+  envConstant = development
 } else if (env.NODE_ENV === 'production') {
-  envConstants = production
+  envConstant = production
 } else if (env.NODE_ENV === 'test') {
-  envConstants = test
+  envConstant = test
 }
 
-export default envConstants
+export const envConstants = envConstant
