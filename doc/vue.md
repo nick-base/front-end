@@ -6,6 +6,7 @@
 - [vuex](https://vuex.vuejs.org/zh/guide/)
 - [vue-loader](https://vue-loader-v14.vuejs.org/zh-cn/configurations/pre-processors.html)
 - [vue-router](https://router.vuejs.org/zh/guide/)
+- [vue-i18n](https://kazupon.github.io/vue-i18n/)
 
 ## Componment Lib
 

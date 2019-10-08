@@ -1,0 +1,28 @@
+# `sessionStorage`和`localStorage`管理
+
+- `src/utils/storage.js` 为操作`sessionStorage`和`localStorage`的util方法,一般不需要更改
+- 数据存储格式统一, 如下
+
+```js
+key: name 
+value: {
+    dataType: typeof (content),    // 数据类型
+    content: content,              // 数据内容
+    datetime: new Date().getTime() // 时间戳
+  }
+```
+
+- `localStorage`中会添加前缀`keyName = 'siteName-'`, 可以按项目需求更改
+- `sessionStorage`方法
+  - `setSession({name: '', content: Object})`
+  - `getSession(String name)`
+  - `removeSession(String name)`
+  - `getAllSession()`
+  - `clearSession()`
+- `localStorage`方法
+  - `setLocal({name: '', content: Object})`
+  - `getLocal(String name)`
+  - `removeLocal(String name)`
+  - `getAllLocal()`
+  - `clearLocal()`
+- 为防止过多使用`sessionStorage`和`localStorage`导致逻辑混乱, 设置和获取逻辑统一写在`src/common/session.js`中
