@@ -4,8 +4,7 @@
     <a @click="setZh">ZH</a>
     <hello-world/>
     <div class="env">
-      {{ env }}<br/>
-      {{ envConstants.name }}
+      {{ env }}
     </div>
   </div>
 </template>
@@ -29,6 +28,9 @@ export default {
     }
   },
   created () {
+    this.$axios.get('/debug/api/test').then((res) => {
+      console.log(res.data)
+    })
   }
 }
 </script>
