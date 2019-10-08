@@ -16,3 +16,11 @@ export const validatenull = (val) => {
   }
   return false
 }
+
+export const serialize = data => {
+  let list = []
+  Object.keys(data).forEach(ele => {
+    list.push(`${ele}=${data[ele]}`)
+  })
+  return list.join('&')
+}
