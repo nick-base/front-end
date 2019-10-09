@@ -3,7 +3,7 @@ import './common/utils/device'
 
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router'
+import router from './routers'
 import store from './store'
 import i18n from './locales'
 import axios from './common/axios'

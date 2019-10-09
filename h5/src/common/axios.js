@@ -14,7 +14,7 @@ axios.defaults.validateStatus = function (status) {
   return status >= 200 && status <= 500
 }
 
-axios.defaults.withCredentials = true
+axios.defaults.withCredentials = false
 
 NProgress.configure({
   showSpinner: false
@@ -22,7 +22,6 @@ NProgress.configure({
 
 axios.interceptors.request.use(config => {
   NProgress.start()
-  const meta = (config.meta || {})
   if (config.url.startsWith(DEBUG_PREFIX)) {
     if (isDev) {
       config.url += DEBUG_EXT
@@ -30,7 +29,7 @@ axios.interceptors.request.use(config => {
       config.url = config.url.replace(DEBUG_PREFIX, '')
     }
   }
-  if (config.method === 'post' && meta.isSerialize === true) {
+  if (config.method === 'post') {
     config.data = serialize(config.data)
   }
   return config

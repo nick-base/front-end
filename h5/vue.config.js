@@ -17,6 +17,10 @@ module.exports = {
         pathRewrite: {
           '^/debug/api': '/api'
         }
+      },
+      '/api': {
+        target: 'http://127.0.0.1:8089',
+        ws: true
       }
     }
   }

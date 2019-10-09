@@ -29,7 +29,7 @@ export default {
     }
   },
   created () {
-    this.$axios.get('/debug/api/test').then((res) => {
+    this.$axios.get('/api/test').then((res) => {
       this.message = res.data
     })
   }
