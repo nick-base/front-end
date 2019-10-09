@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { serialize } from '@/utils/utils'
+import { serialize } from '@/common/utils/utils'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import { isDev, envConstants } from './constants'

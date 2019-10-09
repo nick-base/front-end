@@ -1,4 +1,4 @@
-export const validatenull = (val) => {
+const validatenull = (val) => {
   if (typeof val === 'boolean') {
     return false
   }
@@ -17,10 +17,31 @@ export const validatenull = (val) => {
   return false
 }
 
-export const serialize = data => {
+const isString = (obj) => {
+  return Object.prototype.toString.call(obj) === '[object String]'
+}
+
+const isArray = (obj) => {
+  return Object.prototype.toString.call(obj) === '[object Array]'
+}
+
+const serialize = data => {
   let list = []
   Object.keys(data).forEach(ele => {
     list.push(`${ele}=${data[ele]}`)
   })
   return list.join('&')
+}
+
+const isWechat = (() => {
+  const UA = window.navigator.userAgent.toLowerCase()
+  return UA && UA.indexOf('micromessenger') > 0
+})()
+
+export {
+  validatenull,
+  isString,
+  isArray,
+  serialize,
+  isWechat
 }

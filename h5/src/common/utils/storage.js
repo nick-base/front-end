@@ -1,6 +1,6 @@
 import { validatenull } from './utils'
 
-const keyName = 'siteName-'
+const keyName = 'site-'
 
 const setStorage = (params = {}, isSessionStorage = false) => {
   let {

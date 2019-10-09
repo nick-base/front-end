@@ -1,7 +1,7 @@
 import {
   setSession,
   getSession
-} from '@/utils/storage'
+} from '@/common/utils/storage'
 
 // 系统语言
 const language = 'language'
