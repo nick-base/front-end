@@ -2,7 +2,7 @@ import { register } from '@/routers/helper'
 
 const moduleError = 'error'
 
-const routes = [
+export const routes = [
   {
     path: '/404',
     name: 'error-404',

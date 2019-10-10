@@ -2,7 +2,7 @@ import { register } from '@/routers/helper'
 
 const moduleDemo = 'demo'
 
-const routes = [
+export const routes = [
   {
     path: '/',
     name: 'demo-home',

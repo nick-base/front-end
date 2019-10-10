@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>{{ $t("common.test") }}</h1>
-    <div>pad</div>
+    <h1>{{ $t("demo.about.device") }}</h1>
+    <div>{{ $t("demo.about.Pad") }}</div>
   </div>
 </template>

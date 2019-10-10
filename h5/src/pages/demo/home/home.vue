@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <a @click="setEn">EN</a> |
-    <a @click="setZh">ZH</a>
+    <a @click="setEn">English</a> |
+    <a @click="setZh">中文</a>
     <hello-world/>
     <div class="env">
       {{ message }}

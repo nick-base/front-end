@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import DemoPages from '@/pages/demo'
-import ErrorPages from '@/pages/error'
+import DemoPages from '@/pages/demo/router'
+import ErrorPages from '@/pages/error/router'
 
 Vue.use(Router)
 
