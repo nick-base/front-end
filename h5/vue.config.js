@@ -1,13 +1,25 @@
 module.exports = {
   outputDir: 'dist',
   assetsDir: 'static',
+  pages: {
+    index: {
+      entry: 'src/main.js',
+      template: process.env.NODE_ENV === 'development'
+        ? 'public/index-dev.html'
+        : 'public/index.html',
+      filename: 'index.html'
+    }
+  },
   chainWebpack: (config) => {
-    config.externals({
-      'vue': 'Vue',
-      'vue-router': 'VueRouter',
-      'vuex': 'Vuex',
-      'axios': 'axios'
-    })
+    config.externals(
+      process.env.NODE_ENV === 'development'
+        ? {}
+        : {
+          'vue': 'Vue',
+          'vue-router': 'VueRouter',
+          'vuex': 'Vuex',
+          'axios': 'axios'
+        })
   },
   devServer: {
     proxy: {
