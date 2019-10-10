@@ -5,6 +5,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './routers'
 import store from './store'
+import translate from './common/mixins/translate'
 import i18n from './locales'
 import axios from './common/axios'
 import VueAxios from 'vue-axios'
@@ -13,6 +14,8 @@ Vue.config.productionTip = false
 
 Vue.use(VueAxios, axios)
 Vue.prototype.$axios = axios
+
+Vue.mixin(translate)
 
 new Vue({
   router,
