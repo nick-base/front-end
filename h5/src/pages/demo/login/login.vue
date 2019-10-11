@@ -1,18 +1,21 @@
 <template>
-  <div class="demo-about">
-    <h1>{{ $t2("device") }}</h1>
-    <div>{{ $t2("PC") }}</div>
+  <div class="demo-login">
+    {{ $t2('login') }}
   </div>
 </template>
 
 <script>
+
 export default {
-  name: 'demo.about',
+  name: 'demo.login',
+  components: {
+  },
   data () {
     return {
     }
   },
   created () {
+
   }
 }
 </script>

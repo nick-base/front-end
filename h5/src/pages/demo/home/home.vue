@@ -1,8 +1,9 @@
 <template>
-  <div class="home">
+  <div class="demo-home">
     <a @click="setEn">English</a> |
     <a @click="setZh">中文</a>
     <hello-world/>
+    <div>{{ $t2('home') }}</div>
     <div class="env">
       {{ message }}
     </div>
@@ -15,7 +16,7 @@ import { setEn, setZh } from '@/common/lang'
 import { envConstants } from '@/common/constants'
 
 export default {
-  name: 'home',
+  name: 'demo.home',
   components: {
     HelloWorld
   },
