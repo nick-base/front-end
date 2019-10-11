@@ -31,7 +31,7 @@ export const register = (name, moudle, params = {
    * import  按模块打包为独立文件
   */
   if (moudle) {
-    moudle = isArray(moudle) ? moudle.join('/') : moudle
+    moudle = isArray(moudle) ? moudle.join('/') : moudle.replace(/\./g, '/')
     // return (resolve) => require([`@/pages/${moudle}/${fileName}/${componentName}.vue`], resolve)
     return () => import(`@/pages/${moudle}/${fileName}/${componentName}.vue`)
   } else {
