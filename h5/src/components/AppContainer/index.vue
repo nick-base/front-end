@@ -11,7 +11,7 @@
 <script>
 export default {
   name: 'components.AppContainer',
-  data() {
+  data () {
     return {
     }
   }

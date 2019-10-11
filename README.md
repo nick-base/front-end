@@ -7,5 +7,6 @@
   - [env](./doc/1.3.env.md)
   - [数据请求](./doc/1.4.http.md)
   - [懒加载](./doc/1.5.lazy.md)
+  - [登陆及权限](./doc/1.6.auth.md)
 - UI
   - [适配](./doc/2.1.适配.md)

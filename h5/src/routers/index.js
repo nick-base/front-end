@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import { routerGuard } from './guard'
+import { authGuard } from './auth'
 
 import DemoPages from '@/pages/demo/router'
 import ErrorPages from '@/pages/error/router'
@@ -15,6 +15,6 @@ const routes = [
 const router = new Router()
 router.addRoutes(routes)
 
-routerGuard(router)
+authGuard(router)
 
 export default router

@@ -6,10 +6,16 @@ NProgress.configure({ showSpinner: false })
 const checkLogin = () => {
   return true
 }
+
+const checkPermission = (permission) => {
+  return true
+}
+
 const AUTH_DEFAULT = true
 const LOGIN_PAGE = '/login'
+const FORBIDDEN_PAGE = '/403'
 
-export const routerGuard = (router) => {
+export const authGuard = (router) => {
   router.beforeEach((to, from, next) => {
     NProgress.start()
 
@@ -20,7 +26,18 @@ export const routerGuard = (router) => {
       next()
     } else {
       if (checkLogin()) {
-        next()
+        if (meta.permission) {
+          if (checkPermission(meta.permission)) {
+            next()
+          } else {
+            next(FORBIDDEN_PAGE)
+            if (from.path === FORBIDDEN_PAGE) {
+              NProgress.done()
+            }
+          }
+        } else {
+          next()
+        }
       } else if (to.path === LOGIN_PAGE) {
         next()
       } else {

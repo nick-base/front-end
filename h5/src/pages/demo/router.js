@@ -29,7 +29,8 @@ export const routes = [
     }),
     meta: {
       auth: true,
-      title: 'About'
+      title: 'About',
+      permission: 'page-about'
     }
   }
 ]
